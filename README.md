@@ -24,4 +24,4 @@ npm run build # Build for deployment
 ```
 
 #### Live version
-[BitzPrice](https://nextjs-bitzprice-sbtvmvrpao.now.sh "BitzPrice") deployed on [NOW](https://zeit.co/now "now")
+[BitzPrice](https://nextjs-bitzprice-ntynsxophs.now.sh "BitzPrice") deployed on [NOW](https://zeit.co/now "now")

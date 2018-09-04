@@ -28,12 +28,8 @@ class Chart extends React.Component {
          labels: xDates,
          datasets:[
             {
-              label:'BTC Price',
               data: yPrices,
               fill: false,
-              backgroundColor: [
-               'rgba(218,165,32,1)'
-              ],
               borderColor: [
                 'rgba(218,165,32,1)'
               ],
@@ -48,7 +44,14 @@ class Chart extends React.Component {
       return (
          <div className="d-flex justify-content-center">
             {isChartFetched ? (
-               <Line data={this.buildChart()} />
+              <Line
+                data={this.buildChart()}
+                options={{
+                  legend: {
+                    display: false
+                  }
+                }}
+              />
             ) : (
                <ReactLoading type='bars' color='#20384A' height={20} width={100} />
             )}
