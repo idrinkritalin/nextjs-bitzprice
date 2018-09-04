@@ -9,6 +9,9 @@ Next.js app which shows the current Bitcoin value in USD, GBP and EUR. Simple an
 * react-loading - https://www.npmjs.com/package/react-loading
 * react-icons - http://react-icons.github.io/react-icons
 * isomorphic-unfetch - https://www.npmjs.com/package/isomorphic-unfetch
+* chart.js - http://www.chartjs.org
+* react-chartjs-2 - https://github.com/jerairrest/react-chartjs-2
+
 
 ### APIs
 * Coindesk API - https://www.coindesk.com/api
@@ -21,4 +24,4 @@ npm run build # Build for deployment
 ```
 
 #### Live version
-[BitzPrice](https://nextjs-bitzprice-qkiygqjjyu.now.sh "BitzPrice") deployed on [NOW](https://zeit.co/now "now")
+[BitzPrice](https://nextjs-bitzprice-sbtvmvrpao.now.sh "BitzPrice") deployed on [NOW](https://zeit.co/now "now")

@@ -2,9 +2,9 @@ import Fetch from 'isomorphic-unfetch'
 import Layout from '../components/Layout'
 import Selector from '../components/Selector'
 import Prices from '../components/Prices'
+import Chart from '../components/Chart'
 import ReactLoading from 'react-loading'
 import PropTypes from 'prop-types'
-import { FaBitcoin } from 'react-icons/fa'
 import { FaSync } from 'react-icons/fa'
 
 class Index extends React.Component {
@@ -16,12 +16,13 @@ class Index extends React.Component {
          time: data.time.updated,
          bpi: data.bpi,
          currencies,
-         isFetched: true
+         isDataFetched: true
        }
    }
 
    state = {
-     currency: 'USD'
+     currency: 'EUR',
+     isDataFetched: false
    }
 
    onFilter = (c) => {
@@ -29,18 +30,14 @@ class Index extends React.Component {
    }
 
    render() {
-      const { bpi, time, currencies, isFetched } = this.props
-      const { currency  } = this.state
+      const { time, bpi, currencies, isDataFetched } = this.props
+      const { currency } = this.state
       return (
          <Layout>
             <div>
-               <h1>
-                 <FaBitcoin /> BitzPrice
-               </h1>
                <h6>Choose a currency to check the current Bitcoin rate</h6>
                <p><FaSync /> latest update: {time}</p>
-               <br/>
-               {isFetched ? (
+               {isDataFetched ? (
                  <div>
                   <Selector
                     currencies={currencies}
@@ -56,6 +53,10 @@ class Index extends React.Component {
                   <ReactLoading type='bars' color='#20384A' height={20} width={100} />
                 </div>
                )}
+
+              <Chart
+                currency={currency}
+              />
             </div>
          </Layout>
       )

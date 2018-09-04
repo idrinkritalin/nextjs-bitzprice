@@ -6,17 +6,23 @@ const NavBar = () => (
       <nav className="navbar navbar-expand navbar-dark bg-dark mb-4">
          <div className="container">
             <a className="navbar-brand" href="#">
-             <FaBitcoin /> BitzPrice
+             <h1 className="nav-title"><FaBitcoin /> BitzPrice</h1>
             </a>
             <div className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
-               <li className="nav-item">
-                  <Link href="/"><a className="nav-link">Home</a></Link>
-               </li>
+               <li className="nav-item"></li>
             </ul>
             </div>
          </div>
       </nav>
+
+      <style jsx>
+      {`
+         .nav-title {
+            color: white
+         }
+      `}
+      </style>
    </div>
 )
 
